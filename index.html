@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMH - Help Mental Health</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">HMH</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" onclick="showPage('home')">Home</a></li>
+                <li><a href="#promise" class="nav-link" onclick="showPage('promise')">Our Promise</a></li>
+                <li><a href="#wellness" class="nav-link" onclick="showPage('wellness')">Wellness Check</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to HMH</h1>
+                <h2>Help Mental Health</h2>
+                <p>Your companion on the journey to better mental wellness</p>
+                <p class="subtitle">At HMH, we believe that mental health matters. We're here to support you with resources, guidance, and compassionate care to help you achieve emotional well-being and inner peace.</p>
+                <button class="cta-button" onclick="showPage('wellness')">Start Your Wellness Check</button>
+            </div>
+            <div class="hero-image">
+                <div class="icon-circle">🧠</div>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>AI Support</h3>
+                <p>Chat with our AI assistant to discuss your mental health concerns and get personalized guidance.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <h3>Wellness Check</h3>
+                <p>Regular check-ins to monitor your mental health and identify areas for improvement.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤝</div>
+                <h3>Support & Care</h3>
+                <p>Compassionate resources and tools designed with your well-being in mind.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promise Page -->
+    <div id="promise" class="page">
+        <div class="promise-container">
+            <h1>Our Promise</h1>
+            <div class="promise-content">
+                <p class="promise-heading">At HMH, we promise to help you and your mental health.</p>
+                
+                <div class="promise-items">
+                    <div class="promise-item">
+                        <div class="promise-number">1</div>
+                        <h3>Listen Without Judgment</h3>
+                        <p>We provide a safe space where you can share your thoughts and feelings without fear of judgment.</p>
+                    </div>
+                    
+                    <div class="promise-item">
+                        <div class="promise-number">2</div>
+                        <h3>Provide Expert Guidance</h3>
+                        <p>Our AI-powered tools and resources are designed to offer thoughtful, evidence-based support for your mental health journey.</p>
+                    </div>
+                    
+                    <div class="promise-item">
+                        <div class="promise-number">3</div>
+                        <h3>Support Your Growth</h3>
+                        <p>We're committed to helping you understand yourself better and develop strategies for lasting wellness.</p>
+                    </div>
+                    
+                    <div class="promise-item">
+                        <div class="promise-number">4</div>
+                        <h3>Be Here for You</h3>
+                        <p>Whether you need to talk, learn, or reflect, HMH is available whenever you need support on your wellness journey.</p>
+                    </div>
+                    
+                    <div class="promise-item">
+                        <div class="promise-number">5</div>
+                        <h3>Maintain Your Privacy</h3>
+                        <p>Your conversations and personal information are kept confidential and secure.</p>
+                    </div>
+                </div>
+                
+                <div class="promise-footer">
+                    <p>Your mental health matters. Let's work together toward a healthier, happier you.</p>
+                    <button class="cta-button" onclick="showPage('wellness')">Start Your Journey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wellness Check Page -->
+    <div id="wellness" class="page">
+        <div class="wellness-container">
+            <h1>Wellness Check</h1>
+            <p class="wellness-subtitle">Chat with our AI to discuss your mental health and get personalized support</p>
+            
+            <div class="chat-container">
+                <div class="chat-box" id="chatBox">
+                    <div class="message ai-message">
+                        <div class="message-content">Hi there! 👋 I'm here to help with your mental wellness. How are you feeling today?</div>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="userInput" 
+                        class="chat-input" 
+                        placeholder="Share how you're feeling..."
+                        onkeypress="handleKeyPress(event)"
+                    >
+                    <button class="send-button" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            
+            <div class="wellness-suggestions">
+                <p class="suggestions-title">Quick Topics:</p>
+                <button class="suggestion-btn" onclick="sendPredefinedMessage('I am feeling stressed and overwhelmed')">Stress & Overwhelm</button>
+                <button class="suggestion-btn" onclick="sendPredefinedMessage('I am struggling with anxiety')">Anxiety</button>
+                <button class="suggestion-btn" onclick="sendPredefinedMessage('I need help with my sleep')">Sleep Issues</button>
+                <button class="suggestion-btn" onclick="sendPredefinedMessage('I want to improve my mood')">Mood & Energy</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 HMH - Help Mental Health. All rights reserved.</p>
+        <p>Note: HMH is a support tool. For emergencies, please contact a mental health professional.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
