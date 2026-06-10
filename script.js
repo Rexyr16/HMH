@@ -1,4 +1,5 @@
-
+@@ -1,72 +1,106 @@
+// Store chat context
 let chatContext = {
     lastIssue: null
 };
@@ -377,3 +378,4 @@ function deliverTechnique(issue) {
     conversationState.lastTechniqueGiven = technique;
     
     return technique;
+}
